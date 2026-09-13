@@ -23,3 +23,8 @@ or modify brain state. Original Canvas renderer remains the fallback.
 fm4: Brain view moved to a corner panel; increased baseline visibility,
 square-root display gain and numeric aggregate signal readout. No added
 synthetic activity, neural inputs or changes to worker computation.
+
+fm5: Presentation-only leg, antenna and wing animation driven by speed and
+groom state; soft contact shadow, wing vein detail, touch/wind overlays,
+manual quality control and automatic low resolution after sustained slow frames.
+Animation illustrates behavior; it is not a biomechanical limb simulation.

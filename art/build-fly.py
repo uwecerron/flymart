@@ -35,4 +35,4 @@ for o,color,rough in parts:
  out.append(dict(name=o.name,positions=verts,normals=normals,color=color,roughness=rough))
 root=Path('/Users/uwecerron/Desktop/flymart')
 bpy.ops.wm.save_as_mainfile(filepath=str(root/'art/fly.blend'))
-(root/'public/runtimes/flybrain-9191824-fm4/fly-mesh.json').write_text(json.dumps(out,separators=(',',':')))
+(root/'public/runtimes/flybrain-9191824-fm5/fly-mesh.json').write_text(json.dumps(out,separators=(',',':')))

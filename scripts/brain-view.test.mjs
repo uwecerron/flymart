@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFileSync} from 'node:fs';
-const source=readFileSync('public/runtimes/flybrain-9191824-fm4/js/brain3d.js','utf8');
+const source=readFileSync('public/runtimes/flybrain-9191824-fm5/js/brain3d.js','utf8');
 function fixture(value){
  const sandbox={window:{},BRAIN:{postSynaptic:{TEST:[value,0]},thisState:0},Date,Math};
  vm.runInNewContext(source,sandbox);
