@@ -15,3 +15,7 @@ FlyMart fm2 presentation changes: responsive toolbar, optional brain stats,
 interaction hint, 1.7x initial camera zoom and camera follow. Camera centering
 no longer teleports the animal. Neural worker, connectome data, sensory inputs
 and behavior model are unchanged. See css/flymart.css and js/flymart.js.
+
+fm3: Blender-created mesh and Three.js WebGL presentation adapter.
+Renderer reads upstream position, heading, food and light; does not advance
+or modify brain state. Original Canvas renderer remains the fallback.
