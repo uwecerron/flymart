@@ -12,10 +12,10 @@ var REGION_COLORS = {
 };
 
 var ACTIVATION_DIVISOR = 80;
-var BASE_OPACITY = 0.3;
+var BASE_OPACITY = 0.65;
 var MAX_OPACITY = 0.8;
-var BASE_EMISSIVE_INTENSITY = 0.0;
-var MAX_EMISSIVE_INTENSITY = 1.0;
+var BASE_EMISSIVE_INTENSITY = 0.25;
+var MAX_EMISSIVE_INTENSITY = 2.0;
 var HIGHLIGHT_OPACITY = 0.9;
 var HIGHLIGHT_EMISSIVE = 1.5;
 var HIGHLIGHT_FADE_MS = 300;
@@ -279,6 +279,12 @@ window.Brain3D = {
         } else {
             Brain3D._container.style.display = 'block';
         }
+        Brain3D._container.style.top = (document.getElementById('toolbar').offsetHeight + 8) + 'px';
+        if (!Brain3D._readout) {
+            Brain3D._readout = document.createElement('div');
+            Brain3D._readout.className = 'brain-readout';
+            Brain3D._container.appendChild(Brain3D._readout);
+        }
         Brain3D.active = true;
         window.addEventListener('resize', Brain3D._onResize);
         Brain3D._renderer.domElement.addEventListener('mouseleave', Brain3D._onMouseLeave);
@@ -334,11 +340,18 @@ window.Brain3D = {
                 }
             }
             var avg = count > 0 ? sum / count : 0;
-            var normalized = Math.min(1, Math.max(0, avg / ACTIVATION_DIVISOR));
+            // Display gain only: preserve the real aggregate, amplify low activity visually.
+            var normalized = Math.sqrt(Math.min(1, Math.max(0, avg / ACTIVATION_DIVISOR)));
+            region.rawActivation = avg;
             region.activation = normalized;
 
             var opacity = BASE_OPACITY + normalized * (MAX_OPACITY - BASE_OPACITY);
             var emissiveIntensity = BASE_EMISSIVE_INTENSITY + normalized * (MAX_EMISSIVE_INTENSITY - BASE_EMISSIVE_INTENSITY);
+            if (Brain3D._readout) {
+                Brain3D._readout.textContent = Brain3D._regions.map(function(r) {
+                    return r.name + ': ' + (r.rawActivation || 0).toFixed(2);
+                }).join(' · ') + ' | Aggregate signal, brightness amplified';
+            }
 
             if (region._highlightUntil > 0) {
                 var now = Date.now();

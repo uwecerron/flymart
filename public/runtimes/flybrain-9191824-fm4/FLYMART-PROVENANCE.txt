@@ -19,3 +19,7 @@ and behavior model are unchanged. See css/flymart.css and js/flymart.js.
 fm3: Blender-created mesh and Three.js WebGL presentation adapter.
 Renderer reads upstream position, heading, food and light; does not advance
 or modify brain state. Original Canvas renderer remains the fallback.
+
+fm4: Brain view moved to a corner panel; increased baseline visibility,
+square-root display gain and numeric aggregate signal readout. No added
+synthetic activity, neural inputs or changes to worker computation.

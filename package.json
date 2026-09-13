@@ -14,7 +14,7 @@
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "qa": "node --test scripts/quality-gate.test.mjs && node scripts/quality-gate.mjs",
+    "qa": "node --test scripts/quality-gate.test.mjs scripts/brain-view.test.mjs && node scripts/quality-gate.mjs",
     "release:check": "npm run qa && npm run build:vercel",
     "prebuild:vercel": "npm run qa"
   },

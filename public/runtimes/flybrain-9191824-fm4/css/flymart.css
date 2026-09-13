@@ -8,3 +8,8 @@ body{font-family:system-ui,sans-serif}
 body.show-stats #play-hint{display:none}.zoom-controls{bottom:18px!important;top:auto!important;transform:none!important}body.show-stats .zoom-controls{bottom:175px!important}
 #canvas{background-image:radial-gradient(#75836925 1px,transparent 1px);background-size:28px 28px}
 @media(max-width:600px){.toolbar-right{display:none}.tool-btn{font-size:12px!important;padding:5px 8px!important}body.show-stats #left-panel{height:150px}#play-hint{font-size:11px}}
+
+/* Keep the brain visible without intercepting the fly at center stage. */
+#brain3d-overlay{left:auto!important;right:8px!important;bottom:auto!important;width:32vw;max-width:360px;height:240px;border:1px solid #748966;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px #0008}
+#brain3d-overlay canvas{height:100%!important}.brain-readout{position:absolute;bottom:0;left:0;right:0;background:#101824e8;color:#e1ebdc;font:10px/1.4 system-ui;padding:8px;pointer-events:none;max-height:72px;overflow:hidden}
+@media(max-width:600px){#brain3d-overlay{width:42vw;height:170px}.brain-readout{font-size:9px;max-height:48px}}
