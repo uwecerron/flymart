@@ -1,0 +1,7 @@
+.openai
+.sites-runtime
+.wrangler
+dist
+outputs
+work
+*.tar.gz
