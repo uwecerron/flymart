@@ -1,0 +1,10 @@
+/* FlyMart presentation adapter. Neural model and data are unchanged. */
+:root{--surface:#182016;--surface-alpha:rgba(20,29,17,.96);--border:#435235;--text:#edf5df;--text-muted:#b4c19f}
+body{font-family:system-ui,sans-serif}
+#toolbar{height:auto;min-height:48px;padding:8px 12px;gap:8px;align-items:flex-start}
+.toolbar-left{flex-wrap:wrap;gap:6px;flex:1}.tool-btn{min-height:34px;font-size:13px!important}.toolbar-right{padding-top:5px}.toolbar-title,#githubButton,.sidebar-toggle,#liteBtn{display:none!important}
+#left-panel{display:none!important}body.show-stats #left-panel{display:flex!important;height:160px;max-height:30vh;transform:none!important;bottom:0!important}
+#play-hint{position:fixed;bottom:14px;left:14px;right:70px;z-index:5;pointer-events:none;color:#e0e9cf;background:#172015dd;border:1px solid #415336;border-radius:8px;padding:9px 12px;font-size:12px;max-width:460px}
+body.show-stats #play-hint{display:none}.zoom-controls{bottom:18px!important;top:auto!important;transform:none!important}body.show-stats .zoom-controls{bottom:175px!important}
+#canvas{background-image:radial-gradient(#75836925 1px,transparent 1px);background-size:28px 28px}
+@media(max-width:600px){.toolbar-right{display:none}.tool-btn{font-size:12px!important;padding:5px 8px!important}body.show-stats #left-panel{height:150px}#play-hint{font-size:11px}}

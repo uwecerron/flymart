@@ -4,11 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>FlyBrain</title>
     <link rel="stylesheet" type="text/css" href="./css/main.css?v=17">
+<link rel="stylesheet" href="./css/flymart.css">
 </head>
 
 <body>
     <div id="toolbar">
-        <div class="toolbar-left">
+        <div class="toolbar-left"><button class="tool-btn" id="detailsBtn" aria-pressed="false">Brain stats</button><button class="tool-btn active" id="followBtn" aria-pressed="true">Follow: On</button>
             <button class="tool-btn sidebar-toggle" id="sidebarToggle" aria-label="Toggle panel">&#9776;</button>
             <button class="tool-btn active" data-tool="feed">Feed</button>
             <button class="tool-btn" data-tool="touch">Touch</button>
@@ -112,7 +113,7 @@
         </div>
     </div>
     <div id="drawer-backdrop" class="drawer-backdrop"></div>
-    <canvas id='canvas'></canvas>
+    <div id="play-hint">Choose Feed, then click near the fly to place food. Touch makes it react.</div><canvas id='canvas'></canvas>
     <div id="zoom-controls" class="zoom-controls">
         <button class="zoom-btn" id="zoomIn">+</button>
         <button class="zoom-btn" id="zoomOut">&minus;</button>
@@ -137,6 +138,7 @@
     <script type="text/javascript" src="./js/brain3d.js?v=17"></script>
     <script type="text/javascript" src="./js/education.js?v=17"></script>
     <script type="text/javascript" src="./js/main.js?v=17"></script>
+<script src="./js/flymart.js"></script>
 </body>
 
 </html>

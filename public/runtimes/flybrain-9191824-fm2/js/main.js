@@ -35,7 +35,8 @@ var dragToolOrigin = null;
 var currentDtScale = 1;
 
 // --- Zoom / Pan ---
-var zoomLevel = 1;
+var zoomLevel = 1.7;
+var flymartFollow = true;
 var panX = 0;
 var panY = 0;
 var MIN_ZOOM = 0.5;
@@ -2015,6 +2016,12 @@ function draw() {
 	ctx.save();
 	var cx = window.innerWidth / 2;
 	var cy = window.innerHeight / 2;
+	// FlyMart follows the camera without moving the simulated animal.
+	if (flymartFollow) {
+		var bounds = getLayoutBounds();
+		panX = (cx - fly.x) * zoomLevel;
+		panY = (cy - fly.y) * zoomLevel + (bounds.top + bounds.bottom) / 2 - cy;
+	}
 	ctx.translate(cx + panX, cy + panY);
 	ctx.scale(zoomLevel, zoomLevel);
 	ctx.translate(-cx, -cy);

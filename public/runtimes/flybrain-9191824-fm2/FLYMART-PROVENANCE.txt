@@ -10,3 +10,8 @@ service is not part of the browser simulation and is not deployed here.
 The connectome simulation, Web Worker, behavior model, rendering, controls,
 and FlyWire-derived runtime data are upstream code at the pinned commit.
 Visible em dash punctuation was changed to colons to match FlyMart copy style.
+
+FlyMart fm2 presentation changes: responsive toolbar, optional brain stats,
+interaction hint, 1.7x initial camera zoom and camera follow. Camera centering
+no longer teleports the animal. Neural worker, connectome data, sensory inputs
+and behavior model are unchanged. See css/flymart.css and js/flymart.js.
