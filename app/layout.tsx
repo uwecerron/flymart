@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FlyMart — A launchpad for fly-brain experiments",
-  description: "Discover authentic fly-brain experiments or sell your own runnable project for $2.99 with protected downloads and Stripe Connect payouts.",
+  title: "FlyMart — The tiny brain arcade",
+  description: "Enter an arcade of fly-brain games, strange neural controllers, and creator-built experiments.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
