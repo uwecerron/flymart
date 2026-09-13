@@ -36,7 +36,7 @@ export const freeListings: MarketplaceListing[] = [
     status: "free",
     price_cents: 0,
     runtime_kind: "browser",
-    runtime_path: "/runtimes/flybrain/index.html",
+    runtime_path: "/runtimes/flybrain-9191824/index.html",
     runtime_note:
       "Runs the pinned upstream browser source and its FlyWire-derived connectome data directly on FlyMart.",
     source_commit: "9191824d17871b7851645782d53d23f213ddb938",
