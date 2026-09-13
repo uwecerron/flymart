@@ -1,0 +1,19 @@
+{
+  "releaseId": null,
+  "sourceCommit": null,
+  "testedCommit": null,
+  "integrity": {"status": "not_run", "report": null},
+  "build": {"status": "not_run", "report": null},
+  "browser": {
+    "status": "not_run",
+    "viewports": ["390x844", "768x1024", "1440x900"],
+    "interactions": ["start", "feed", "touch", "air", "zoom", "follow", "stats", "close", "reopen"],
+    "consoleErrors": null,
+    "failedRequests": null,
+    "evidence": []
+  },
+  "performance": {"status": "not_run", "device": null, "coldBytes": null, "frameTimeP95Ms": null},
+  "deployment": {"status": "not_run", "url": null, "commit": null, "runtimeVersion": null, "rollbackCommit": null},
+  "payments": {"status": "not_run"},
+  "token": {"status": "not_run"}
+}

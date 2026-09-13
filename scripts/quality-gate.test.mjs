@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { validateRelease } from './quality-gate.mjs';
+const release = JSON.parse(readFileSync('quality/releases.json')).releases[0];
+const check = r => validateRelease(r, process.cwd());
+test('current pinned release passes', () => assert.deepEqual(check(release), []));
+test('unpinned source is blocked', () => assert.ok(check({...release, commit:'main'}).length));
+test('modified source is blocked', () => assert.ok(check({...release, files:{...release.files,[release.entry]:'0'.repeat(64)}}).some(e=>e.includes('Source drift'))));
+test('missing entry is blocked', () => assert.ok(check({...release,entry:'missing.html'}).length));
+test('oversized release is blocked', () => assert.ok(check({...release,maxBytes:1}).length));
+test('directory traversal is blocked', () => assert.ok(check({...release,files:{'../outside':'x'}}).some(e=>e.includes('Unsafe path'))));
+test('native code cannot be advertised as browser verified', () => assert.ok(check({...release,runtime:'native'}).length));
+test('missing license is blocked', () => assert.ok(check({...release,license:''}).length));
