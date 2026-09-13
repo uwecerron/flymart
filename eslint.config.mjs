@@ -11,6 +11,8 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+    // Third-party browser runtimes are preserved at their pinned upstream source.
+    "public/runtimes/**",
     "next-env.d.ts",
   ]),
   {

@@ -1,0 +1,11 @@
+FlyBrain authentic browser runtime
+Upstream: https://github.com/snedea/flybrain
+Pinned commit: 9191824d17871b7851645782d53d23f213ddb938
+License: MIT (see LICENSE.md)
+
+This directory contains the upstream browser runtime, connectome binary, and
+visual assets required to execute the project. FlyMart removes only the
+optional caretaker server UI scripts from index.html because that Node/SQLite
+service is not part of the browser simulation and is not deployed here.
+The connectome simulation, Web Worker, behavior model, rendering, controls,
+and FlyWire-derived runtime data are upstream code at the pinned commit.

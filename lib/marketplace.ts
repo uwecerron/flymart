@@ -14,9 +14,34 @@ export type MarketplaceListing = {
   stripe_account_id: string | null;
   status: "free" | "pending" | "published" | "rejected";
   price_cents: number;
+  runtime_kind?: "browser" | "stream" | "external";
+  runtime_path?: string | null;
+  runtime_note?: string | null;
+  source_commit?: string | null;
+  download_path?: string | null;
 };
 
 export const freeListings: MarketplaceListing[] = [
+  {
+    id: "flybrain-browser",
+    title: "FlyBrain",
+    genre: "Browser Simulation",
+    description:
+      "The actual 139,255-neuron FlyWire FAFB v783 connectome running in real time through the upstream project's leaky integrate-and-fire Web Worker.",
+    creator_name: "snedea / FlyBrain contributors",
+    repo_url: "https://github.com/snedea/flybrain",
+    storage_path: null,
+    seller_id: null,
+    stripe_account_id: null,
+    status: "free",
+    price_cents: 0,
+    runtime_kind: "browser",
+    runtime_path: "/runtimes/flybrain/index.html",
+    runtime_note:
+      "Runs the pinned upstream browser source and its FlyWire-derived connectome data directly on FlyMart.",
+    source_commit: "9191824d17871b7851645782d53d23f213ddb938",
+    download_path: null,
+  },
   {
     id: "doomfly",
     title: "DOOMFLY",
@@ -30,6 +55,12 @@ export const freeListings: MarketplaceListing[] = [
     stripe_account_id: null,
     status: "free",
     price_cents: 0,
+    runtime_kind: "stream",
+    runtime_path: null,
+    runtime_note:
+      "The upstream runtime needs several GB of memory, downloaded MaleCNS data, ViZDoom, and a separate Python worker. FlyMart will only enable play when a real worker stream is connected.",
+    source_commit: "71ecf53d78eaffaf1a57ed7b0ccf5d458abc9f33",
+    download_path: "/downloads/doomfly-source.zip",
   },
   {
     id: "flybrain-halflife",
@@ -44,6 +75,12 @@ export const freeListings: MarketplaceListing[] = [
     stripe_account_id: null,
     status: "free",
     price_cents: 0,
+    runtime_kind: "external",
+    runtime_path: null,
+    runtime_note:
+      "The actual Half-Life mode needs Windows, DirectInput, and an installed GoldSrc/Half-Life runtime. It cannot execute inside Vercel's browser or serverless environment.",
+    source_commit: "5dc63cd206f1f20ec5d7bb65e227274e0baa2783",
+    download_path: "/downloads/flybrain-halflife-source.zip",
   },
 ];
 
