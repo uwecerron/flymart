@@ -1,4 +1,4 @@
-/* neuro-renderer.js — T7.5
+/* neuro-renderer.js: T7.5
  *
  * WebGL2 renderer that draws 139K neurons as GL_POINTS in the left sidebar,
  * colored by region type, brightness driven by fire state from the worker.

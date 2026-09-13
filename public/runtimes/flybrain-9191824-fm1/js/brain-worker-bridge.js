@@ -1,4 +1,4 @@
-/* brain-worker-bridge.js — T7.4
+/* brain-worker-bridge.js: T7.4
  *
  * Bridges the main-thread behavioral layer (connectome.js, fly-logic.js, main.js)
  * to the LIF Web Worker (sim-worker.js). Loads the full connectome binary,
@@ -125,7 +125,7 @@
 				console.warn('connectome.bin.gz load failed, using 59-group BRAIN.update():', err);
 				BRAIN.update = legacyUpdate;
 				if (subtitle) {
-					subtitle.textContent = '59 neuron groups \u2014 FlyWire approximation (fallback)';
+					subtitle.textContent = '59 neuron groups: FlyWire approximation (fallback)';
 					subtitle.classList.remove('loading');
 				}
 			});
@@ -168,14 +168,14 @@
 			var subtitle = document.getElementById('connectomeSubtitle');
 			if (subtitle) {
 				subtitle.textContent = neuronCount.toLocaleString() + ' neurons / ' +
-					e.data.edgeCount.toLocaleString() + ' connections \u2014 FlyWire FAFB v783';
+					e.data.edgeCount.toLocaleString() + ' connections: FlyWire FAFB v783';
 				subtitle.classList.remove('loading');
 			}
 			// Update header scale indicator
 			var scaleEl = document.getElementById('scaleIndicator');
 			if (scaleEl) {
 				scaleEl.textContent = neuronCount.toLocaleString() + ' neurons / ' +
-					e.data.edgeCount.toLocaleString() + ' connections \u2014 FlyWire FAFB v783';
+					e.data.edgeCount.toLocaleString() + ' connections: FlyWire FAFB v783';
 				scaleEl.style.display = '';
 			}
 			break;
@@ -200,7 +200,7 @@
 				var activePct = Math.round(e.data.activeNeurons / e.data.totalNeurons * 100);
 				statsSubtitle.textContent = neuronCount.toLocaleString() + ' neurons (' +
 					firedPct + '% firing, ' + activePct + '% active groups, ' +
-					e.data.avgTickMs.toFixed(1) + 'ms/tick) \u2014 FlyWire FAFB v783';
+					e.data.avgTickMs.toFixed(1) + 'ms/tick): FlyWire FAFB v783';
 			}
 			break;
 
@@ -223,7 +223,7 @@
 		BRAIN.update = legacyUpdate;
 		var subtitle = document.getElementById('connectomeSubtitle');
 		if (subtitle) {
-			subtitle.textContent = '59 neuron groups \u2014 FlyWire approximation (fallback)';
+			subtitle.textContent = '59 neuron groups: FlyWire approximation (fallback)';
 			subtitle.classList.remove('loading');
 		}
 	}

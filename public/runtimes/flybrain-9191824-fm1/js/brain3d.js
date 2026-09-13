@@ -1,4 +1,4 @@
-/* brain3d.js — Interactive 3D Drosophila brain visualization
+/* brain3d.js: Interactive 3D Drosophila brain visualization
  * Reads live connectome activation levels from BRAIN.postSynaptic
  * and renders a Three.js scene with glowing neuropil regions.
  */
@@ -23,7 +23,7 @@ var HIGHLIGHT_FADE_MS = 300;
 var REGION_DEFS = [
     {
         name: 'Optic Lobes',
-        description: 'Visual processing — motion detection, color, pattern recognition, and optic flow',
+        description: 'Visual processing: motion detection, color, pattern recognition, and optic flow',
         type: 'sensory',
         neurons: ['VIS_R1R6', 'VIS_R7R8', 'VIS_ME', 'VIS_LO', 'VIS_LC', 'VIS_LPTC'],
         meshDefs: [
@@ -33,7 +33,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Antennal Lobes',
-        description: 'Olfactory processing — food and danger odor detection',
+        description: 'Olfactory processing: food and danger odor detection',
         type: 'sensory',
         neurons: ['OLF_ORN_FOOD', 'OLF_ORN_DANGER', 'OLF_LN', 'OLF_PN'],
         meshDefs: [
@@ -43,7 +43,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Mushroom Bodies',
-        description: 'Learning and memory — associative odor memories, reward and punishment',
+        description: 'Learning and memory: associative odor memories, reward and punishment',
         type: 'central',
         neurons: ['MB_KC', 'MB_APL', 'MB_MBON_APP', 'MB_MBON_AV', 'MB_DAN_REW', 'MB_DAN_PUN'],
         meshDefs: [
@@ -55,7 +55,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Central Complex',
-        description: 'Navigation — heading direction, path integration, locomotion coordination',
+        description: 'Navigation: heading direction, path integration, locomotion coordination',
         type: 'central',
         neurons: ['CX_EPG', 'CX_PFN', 'CX_FC', 'CX_HDELTA', 'CLOCK_DN'],
         meshDefs: [
@@ -64,7 +64,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Lateral Horn',
-        description: 'Innate odor responses — hardwired approach and avoidance behaviors',
+        description: 'Innate odor responses: hardwired approach and avoidance behaviors',
         type: 'central',
         neurons: ['LH_APP', 'LH_AV'],
         meshDefs: [
@@ -74,7 +74,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Subesophageal Zone',
-        description: 'Feeding and grooming command center — taste processing, motor commands',
+        description: 'Feeding and grooming command center: taste processing, motor commands',
         type: 'central',
         neurons: ['SEZ_FEED', 'SEZ_GROOM', 'SEZ_WATER', 'GUS_GRN_SWEET', 'GUS_GRN_BITTER', 'GUS_GRN_WATER', 'GNG_DESC'],
         meshDefs: [
@@ -83,7 +83,7 @@ var REGION_DEFS = [
     },
     {
         name: 'VNC / Motor',
-        description: 'Motor output — locomotion, flight, and body movement commands',
+        description: 'Motor output: locomotion, flight, and body movement commands',
         type: 'motor',
         neurons: ['DN_WALK', 'DN_FLIGHT', 'DN_TURN', 'DN_BACKUP', 'DN_STARTLE', 'VNC_CPG'],
         collectMNPrefix: true,
@@ -93,7 +93,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Thermosensory',
-        description: 'Temperature sensing — warm and cool detection',
+        description: 'Temperature sensing: warm and cool detection',
         type: 'sensory',
         neurons: ['THERMO_WARM', 'THERMO_COOL'],
         meshDefs: [
@@ -102,7 +102,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Mechanosensory',
-        description: 'Touch and proprioception — bristle, wind, and body position sensing',
+        description: 'Touch and proprioception: bristle, wind, and body position sensing',
         type: 'sensory',
         neurons: ['MECH_BRISTLE', 'MECH_JO', 'MECH_CHORD', 'ANTENNAL_MECH', 'NOCI'],
         meshDefs: [
@@ -111,7 +111,7 @@ var REGION_DEFS = [
     },
     {
         name: 'Drives',
-        description: 'Internal motivational states — hunger, fear, fatigue, curiosity, grooming urge',
+        description: 'Internal motivational states: hunger, fear, fatigue, curiosity, grooming urge',
         type: 'drives',
         neurons: ['DRIVE_HUNGER', 'DRIVE_FEAR', 'DRIVE_FATIGUE', 'DRIVE_CURIOSITY', 'DRIVE_GROOM'],
         meshDefs: [

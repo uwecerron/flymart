@@ -6,7 +6,7 @@
             neurons: ['VIS_R1R6', 'VIS_R7R8', 'VIS_ME', 'VIS_LO', 'VIS_LC', 'VIS_LPTC'],
             type: 'sensory',
             explanation: 'The optic lobes are the fly\'s visual processing centers, one on each side of the brain. They detect motion, color, edges, and looming objects. Almost half the fly\'s brain is devoted to vision.',
-            analogy: 'Like your visual cortex \u2014 but optimized for detecting fast motion and avoiding swatters.',
+            analogy: 'Like your visual cortex: but optimized for detecting fast motion and avoiding swatters.',
             interaction: 'Change the Light setting from Bright to Dim or Dark and watch the optic lobes respond.',
             populationEstimate: '~60,000 neurons in the real fly'
         },
@@ -16,7 +16,7 @@
             neurons: ['OLF_ORN_FOOD', 'OLF_ORN_DANGER', 'OLF_LN', 'OLF_PN'],
             type: 'sensory',
             explanation: 'The antennal lobes process smells detected by the antennae. Different odors activate different glomeruli (clusters), letting the fly distinguish food from danger.',
-            analogy: 'Like your olfactory bulb \u2014 the first stop for smell information before it reaches higher brain areas.',
+            analogy: 'Like your olfactory bulb: the first stop for smell information before it reaches higher brain areas.',
             interaction: 'Place food on the canvas and watch olfactory neurons fire as the fly detects it.',
             populationEstimate: '~2,600 neurons across ~50 glomeruli'
         },
@@ -26,7 +26,7 @@
             neurons: ['MB_KC', 'MB_APL', 'MB_MBON_APP', 'MB_MBON_AV', 'MB_DAN_REW', 'MB_DAN_PUN'],
             type: 'central',
             explanation: 'The mushroom bodies are the fly\'s learning and memory center. They associate smells with rewards or punishments, allowing the fly to learn which odors mean food and which mean danger.',
-            analogy: 'Like the fly\'s hippocampus \u2014 they form and recall memories about smells.',
+            analogy: 'Like the fly\'s hippocampus: they form and recall memories about smells.',
             interaction: 'Feed the fly repeatedly and watch the reward dopamine neurons (DAN) activate alongside the Kenyon cells.',
             populationEstimate: '~2,000 Kenyon cells + ~400 output/dopamine neurons'
         },
@@ -36,7 +36,7 @@
             neurons: ['CX_EPG', 'CX_PFN', 'CX_FC', 'CX_HDELTA', 'CLOCK_DN'],
             type: 'central',
             explanation: 'The central complex is the fly\'s navigation hub. It maintains an internal compass, tracks the fly\'s heading, and coordinates locomotion patterns.',
-            analogy: 'Like a GPS and steering system combined \u2014 it knows which way the fly is pointing and plans where to go.',
+            analogy: 'Like a GPS and steering system combined: it knows which way the fly is pointing and plans where to go.',
             interaction: 'Watch the compass neurons (EPG) as the fly walks and changes direction.',
             populationEstimate: '~3,000 neurons in the real fly'
         },
@@ -46,7 +46,7 @@
             neurons: ['LH_APP', 'LH_AV'],
             type: 'central',
             explanation: 'The lateral horn handles innate (unlearned) responses to odors. Unlike the mushroom bodies which learn, the lateral horn triggers hardwired approach or avoidance behaviors.',
-            analogy: 'Like an instinctive reflex \u2014 you pull your hand from a hot stove before you think about it.',
+            analogy: 'Like an instinctive reflex: you pull your hand from a hot stove before you think about it.',
             interaction: 'Place food near the fly and watch LH_APP (approach) activate. The lateral horn responds even without prior learning.',
             populationEstimate: '~1,400 neurons'
         },
@@ -56,7 +56,7 @@
             neurons: ['SEZ_FEED', 'SEZ_GROOM', 'SEZ_WATER', 'GUS_GRN_SWEET', 'GUS_GRN_BITTER', 'GUS_GRN_WATER', 'GNG_DESC'],
             type: 'central',
             explanation: 'The subesophageal zone (SEZ) is the feeding and grooming command center. It processes taste information and sends motor commands to extend the proboscis or initiate grooming.',
-            analogy: 'Like a cafeteria manager \u2014 it decides whether to eat based on what the taste buds report.',
+            analogy: 'Like a cafeteria manager: it decides whether to eat based on what the taste buds report.',
             interaction: 'Feed the fly and watch the SEZ light up. Touch the fly to trigger grooming commands.',
             populationEstimate: '~7,000 neurons'
         },
@@ -67,8 +67,8 @@
             type: 'motor',
             collectMNPrefix: true,
             explanation: 'The ventral nerve cord (VNC) is the fly\'s spinal cord equivalent. It contains motor neurons that control the legs, wings, proboscis, and abdomen, plus central pattern generators that coordinate rhythmic movements like walking.',
-            analogy: 'Like your spinal cord \u2014 it relays commands from the brain to the muscles and coordinates repetitive movements like walking.',
-            interaction: 'Watch the motor neurons activate during any behavior \u2014 walking lights up leg motors, flight lights up wing motors.',
+            analogy: 'Like your spinal cord: it relays commands from the brain to the muscles and coordinates repetitive movements like walking.',
+            interaction: 'Watch the motor neurons activate during any behavior: walking lights up leg motors, flight lights up wing motors.',
             populationEstimate: '~15,000 neurons including motor neurons and interneurons'
         },
         {
@@ -77,7 +77,7 @@
             neurons: ['THERMO_WARM', 'THERMO_COOL'],
             type: 'sensory',
             explanation: 'Thermosensory neurons detect temperature changes. Warm and cool sensors report to the brain so the fly can seek comfortable temperatures.',
-            analogy: 'Like the temperature sensors in your skin \u2014 they tell the brain whether it is too hot or too cold.',
+            analogy: 'Like the temperature sensors in your skin: they tell the brain whether it is too hot or too cold.',
             interaction: 'Change the Temp setting to Warm or Cool and watch the corresponding thermosensory neurons activate.',
             populationEstimate: '~60 neurons'
         },
@@ -96,10 +96,10 @@
             name: 'Drives',
             neurons: ['DRIVE_HUNGER', 'DRIVE_FEAR', 'DRIVE_FATIGUE', 'DRIVE_CURIOSITY', 'DRIVE_GROOM'],
             type: 'drives',
-            explanation: 'Drive neurons represent internal motivational states. They fluctuate over time and bias the fly\'s behavior \u2014 a hungry fly seeks food, a frightened fly flees, a tired fly rests.',
-            analogy: 'Like your own feelings of hunger, anxiety, or tiredness \u2014 invisible internal states that shape what you do next.',
+            explanation: 'Drive neurons represent internal motivational states. They fluctuate over time and bias the fly\'s behavior: a hungry fly seeks food, a frightened fly flees, a tired fly rests.',
+            analogy: 'Like your own feelings of hunger, anxiety, or tiredness: invisible internal states that shape what you do next.',
             interaction: 'Watch the drive meters in the bottom panel. Hunger increases over time; fear spikes when you touch or blow air at the fly.',
-            populationEstimate: 'Distributed \u2014 modeled as 5 functional groups'
+            populationEstimate: 'Distributed: modeled as 5 functional groups'
         }
     ];
 

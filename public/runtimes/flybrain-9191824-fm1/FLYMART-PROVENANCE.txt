@@ -9,3 +9,4 @@ optional caretaker server UI scripts from index.html because that Node/SQLite
 service is not part of the browser simulation and is not deployed here.
 The connectome simulation, Web Worker, behavior model, rendering, controls,
 and FlyWire-derived runtime data are upstream code at the pinned commit.
+Visible em dash punctuation was changed to colons to match FlyMart copy style.

@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   headers() {
     return [
       {
-        source: "/runtimes/flybrain-9191824/:path*",
+        source: "/runtimes/flybrain-9191824-fm1/:path*",
         headers: [
           {
             key: "Cache-Control",

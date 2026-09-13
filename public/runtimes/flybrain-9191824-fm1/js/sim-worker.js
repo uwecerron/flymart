@@ -1,4 +1,4 @@
-/* LIF neuron simulator Web Worker — T7.3 + T7.7 (neuropil-gated)
+/* LIF neuron simulator Web Worker: T7.3 + T7.7 (neuropil-gated)
  *
  * Leaky integrate-and-fire simulation over the full Drosophila connectome.
  * Receives a binary connectome ArrayBuffer (optionally gzipped) on init.
